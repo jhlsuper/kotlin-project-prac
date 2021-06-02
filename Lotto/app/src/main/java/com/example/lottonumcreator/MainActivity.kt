@@ -125,5 +125,6 @@ class MainActivity : AppCompatActivity() {
             in 31..40 -> textView.background = ContextCompat.getDrawable(this,R.drawable.circle_gray)
             else -> textView.background = ContextCompat.getDrawable(this,R.drawable.circle_green)
         }
+        //hoho
     }
 }
