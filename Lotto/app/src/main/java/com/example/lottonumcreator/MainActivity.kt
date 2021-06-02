@@ -5,21 +5,35 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.NumberPicker
+import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 
 class MainActivity : AppCompatActivity() {
 
-    private val clearButton:Button by lazy{
+    private val clearButton: Button by lazy {
         findViewById<Button>(R.id.btn_clear)
     }
-    private  val addButton:Button by lazy {
+    private val addButton: Button by lazy {
         findViewById<Button>(R.id.btn_add)
     }
-    private val runButton:Button by lazy{
+    private val runButton: Button by lazy {
         findViewById<Button>(R.id.btn_run)
     }
-    private val numberPicker:NumberPicker by lazy {
+    private val numberPicker: NumberPicker by lazy {
         findViewById<NumberPicker>(R.id.numPicker)
+    }
+
+    private val numberTextViewList: List<TextView> by lazy {
+        listOf<TextView>(
+            findViewById<TextView>(R.id.txt_1),
+            findViewById<TextView>(R.id.txt_2),
+            findViewById<TextView>(R.id.txt_3),
+            findViewById<TextView>(R.id.txt_4),
+            findViewById<TextView>(R.id.txt_5),
+            findViewById<TextView>(R.id.txt_6)
+        )
     }
     private var didRun = false
 
@@ -35,41 +49,82 @@ class MainActivity : AppCompatActivity() {
 
         initRunButton()
         initAddButton()
+        initClearButton()
     }
-    private fun initRunButton(){
-        runButton.setOnClickListener{
+
+    private fun initRunButton() {
+        runButton.setOnClickListener {
             val list = getRandomNumber()
-            Log.d("MainActivity",list.toString())
+
+            didRun = true
+            list.forEachIndexed{index, number->
+                val textView = numberTextViewList[index]
+                textView.text = number.toString()
+                textView.isVisible = true
+
+                setNumberBackground(number,textView)
+            }
+
         }
     }
-    private fun getRandomNumber() :List<Int>{
+
+    private fun initClearButton() {
+        clearButton.setOnClickListener{
+            pickNumberSet.clear()
+            numberTextViewList.forEach{
+                it.isVisible = false
+            }
+            didRun = false
+        }
+    }
+
+    private fun getRandomNumber(): List<Int> {
         val numberList = mutableListOf<Int>().apply {
             for (i in 1..45) {
+                if (pickNumberSet.contains(i)){
+                    continue
+                }
                 this.add(i)
             }
         }
         numberList.shuffle()
-        val newList = numberList.subList(0,6) //from to 0,1,2,3,4,5
+        val newList = pickNumberSet.toList()+ numberList.subList(0, 6-pickNumberSet.size) //from to 0,1,2,3,4,5
         return newList.sorted()
     }
 
-    private fun initAddButton(){
-        addButton.setOnClickListener{
-            if (didRun){
-                Toast.makeText(this,"초기화 후에 시도해주세요.",Toast.LENGTH_SHORT).show()
+    private fun initAddButton() {
+        addButton.setOnClickListener {
+            if (didRun) {
+                Toast.makeText(this, "초기화 후에 시도해주세요.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            if (pickNumberSet.size>=5){
-                Toast.makeText(this,"번호는 5개까지만 선택할수 있습니다.",Toast.LENGTH_SHORT).show()
+            if (pickNumberSet.size >= 5) {
+                Toast.makeText(this, "번호는 5개까지만 선택할수 있습니다.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
 
             }
-            if(pickNumberSet.contains(numberPicker.value)){
-                Toast.makeText(this,"이미 선택한 번호입니다",Toast.LENGTH_SHORT).show()
+            if (pickNumberSet.contains(numberPicker.value)) {
+                Toast.makeText(this, "이미 선택한 번호입니다", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             } //여기까지 예외처리
+            val textView = numberTextViewList[pickNumberSet.size]
+            textView.isVisible =true
+            textView.text = numberPicker.value.toString()
 
+            setNumberBackground(numberPicker.value,textView)
+            pickNumberSet.add(numberPicker.value)
 
         }
+
+    }
+    private fun setNumberBackground(number:Int, textView:TextView){
+        when(number){
+            in 1..10->textView.background = ContextCompat.getDrawable(this,R.drawable.circle_yellow)
+            in 11..20 -> textView.background = ContextCompat.getDrawable(this,R.drawable.circle_blue)
+            in 21..30 -> textView.background = ContextCompat.getDrawable(this,R.drawable.circle_red)
+            in 31..40 -> textView.background = ContextCompat.getDrawable(this,R.drawable.circle_gray)
+            else -> textView.background = ContextCompat.getDrawable(this,R.drawable.circle_green)
+        }
+        //hoho
     }
 }
