@@ -2,11 +2,14 @@ package com.example.secret_diary
 
 import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.NumberPicker
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
+import androidx.core.content.edit
 
 class MainActivity : AppCompatActivity() {
 
@@ -59,42 +62,48 @@ class MainActivity : AppCompatActivity() {
             val passwordFromUser = "${numberPicker1.value}${numberPicker2.value}${numberPicker3.value}"
             if (passwordPreferences.getString("password","000").equals(passwordFromUser)){
                 //패스워드 성공
-                //TODO 다이어리 페이지 작성후에 넘겨주어야함
-//                startActivity()
+
+                startActivity(Intent(this,DiaryActivity::class.java))
             }else{
                 //실패패
-            AlertDialog.Builder(this)
-                .setTitle("실패!!")
-                .setMessage("비밀번호가 잘못되었습니다.")
-                .setPositiveButton("확인"){_,_-> }
-                .create()
-                .show()
+            showErrorAlertDialog()
         }
             changePasswordButton.setOnClickListener{
+                val passwordPreferences = getSharedPreferences("password",Context.MODE_PRIVATE)
+                val passwordFromUser = "${numberPicker1.value}${numberPicker2.value}${numberPicker3.value}"
                 if (changePasswordMode){
+
+                    passwordPreferences.edit(true) {
+                        putString("password",passwordFromUser)
+
+                    }
+                    changePasswordMode = false
+                    changePasswordButton.setBackgroundColor(Color.BLACK)
                     //번호를 저장하는 기능
                 }else{
                     //changePasswordMode를 활성화 비밀번호가 맞는지를 체크크
-                    val passwordPreferences= getSharedPreferences("password", Context.MODE_PRIVATE)
 
-                    val passwordFromUser = "${numberPicker1.value}${numberPicker2.value}${numberPicker3.value}"
                     if (passwordPreferences.getString("password","000").equals(passwordFromUser)){
-                        //패스워드 성공
-                        //TODO 다이어리 페이지 작성후에 넘겨주어야함
+                        changePasswordMode = true
+                        Toast.makeText(this,"변경할 패스워드를 입력해주세요",Toast.LENGTH_SHORT).show()
+                        changePasswordButton.setBackgroundColor(Color.RED)
 //                startActivity()
                     }else{
                         //실패패
-                        AlertDialog.Builder(this)
-                            .setTitle("실패!!")
-                            .setMessage("비밀번호가 잘못되었습니다.")
-                            .setPositiveButton("확인"){_,_-> }
-                            .create()
-                            .show()
+                        showErrorAlertDialog()
                     }
                 }
             }
 
        }
+    }
+    private fun showErrorAlertDialog() {
+        AlertDialog.Builder(this)
+            .setTitle("실패!!")
+            .setMessage("비밀번호가 잘못되었습니다.")
+            .setPositiveButton("확인"){_,_-> }
+            .create()
+            .show()
     }
 
 }
