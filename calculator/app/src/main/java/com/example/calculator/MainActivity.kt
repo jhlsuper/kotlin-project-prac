@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
         val expressionText = expressionTextView.text.toString()
         val resultText = calculateExpression()
 
-        resultTextView.text =""
+        resultTextView.text = ""
         expressionTextView.text = resultText
 
         isOperator = false
@@ -146,17 +146,28 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
     fun clearButtonClicked(v: View) {
         expressionTextView.text = ""
         resultTextView.text = ""
         isOperator = false
-        hasOperator =false
+        hasOperator = false
     }
 
     fun historyButtonClicked(v: View) {
+
+    }
+
+
+    fun closeHistoryButtonClicked(v: View) {
+
+    }
+
+    fun historyClearButtonClicked(v: View) {
+        // TODO 디비에서 모든 기록 삭제
+        // TODO 뷰에서 모든 기록 삭제
     }
 }
-
 fun String.isNumber(): Boolean {
     return try {
         this.toBigInteger()
@@ -165,3 +176,4 @@ fun String.isNumber(): Boolean {
         false
     }
 }
+
