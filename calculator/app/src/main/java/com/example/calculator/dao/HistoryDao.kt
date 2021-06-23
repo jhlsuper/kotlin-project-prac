@@ -17,6 +17,7 @@ interface HistoryDao {
 
     @Query("DELETE FROM history")
     fun deleteAll()
+}
 //
 //    @Delete
 //    fun delete(history: History)
@@ -24,4 +25,3 @@ interface HistoryDao {
 //    @Query("SELECT * FROM history WHERE result LIKE :result LIMIT 1")
 //    fun findByResult(result :String) :List<History>
 
-}
