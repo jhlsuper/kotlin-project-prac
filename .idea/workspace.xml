@@ -22,21 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c9fab7b-f91c-4122-aad1-27e0b65418b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kotlin-nav-prac/.idea/runConfigurations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-nav-prac/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-nav-prac/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-nav-prac/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-nav-prac/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-nav-prac/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-nav-prac/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-nav-prac/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-nav-prac/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-nav-prac/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-nav-prac/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-nav-prac/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-nav-prac/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-nav-prac/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-nav-prac/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-nav-prac/.idea/modules/app/Test.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-nav-prac/.idea/modules/app/Test.app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-nav-prac/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-nav-prac/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-nav-prac/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-nav-prac/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-nav-prac/app/src/main/java/com/example/test/fragment/MainFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-nav-prac/app/src/main/java/com/example/test/fragment/MainFragment.kt" afterDir="false" />
-    </list>
+    <list default="true" id="3c9fab7b-f91c-4122-aad1-27e0b65418b3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../../../User/Noname/SDK" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/secret-diary" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/calculator" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -77,12 +63,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1016" y="236" key="FileChooserDialogImpl" timestamp="1622696957117">
+    <state x="1016" y="236" key="FileChooserDialogImpl" timestamp="1624425839667">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="1016" y="236" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1622696957117" />
+    <state x="1016" y="236" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1624425839667" />
     <state x="1715" y="295" key="FileChooserDialogImpl/63.0.2497.1080@63.0.2497.1080" timestamp="1622633009366" />
   </component>
 </project>
