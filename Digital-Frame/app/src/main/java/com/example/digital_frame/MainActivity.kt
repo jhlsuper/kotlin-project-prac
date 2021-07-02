@@ -1,5 +1,6 @@
 package com.example.digital_frame
 
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
@@ -86,7 +87,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
     private fun navigatePhotos(){
-        
+        val intent = Intent(Intent.ACTION_GET_CONTENT)
+        intent.type = "image/*"
+        startActivityForResult(
+            intent,
+            2000
+        )
     }
 
 
