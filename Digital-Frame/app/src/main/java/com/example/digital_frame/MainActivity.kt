@@ -14,6 +14,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 
 
+
 class MainActivity : AppCompatActivity() {
 
     private val addPhotoButton: Button by lazy {
