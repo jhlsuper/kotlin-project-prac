@@ -10,6 +10,10 @@ import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
 
+    private val visualizerView:SoundVisualizerView by lazy {
+        findViewById(R.id.soundVisualizerView)
+    }
+
     private val resetButton: Button by lazy {
         findViewById(R.id.resetButton)
     }
@@ -115,6 +119,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun bindViews() {
+        SoundVisualizerView.onRequestCurrentAmplitude ={
+            recorder?.maxAmplitude ?:0
+        }
         resetButton.setOnClickListener {
             stopPlaying()
             state =State.BEFORE_RECORDING
