@@ -120,7 +120,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun bindViews() {
         SoundVisualizerView.onRequestCurrentAmplitude ={
-            recorder?.maxAmplitude ?:0
+            recorder?.maxAmplitude ?:0 //값이 null일경우 0
         }
         resetButton.setOnClickListener {
             stopPlaying()

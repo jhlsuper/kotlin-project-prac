@@ -30,7 +30,7 @@ class SoundVisualizerView(
     private val visualizeRepeatAction :Runnable=object:Runnable{
         override fun run() {
             // Amplitube, Draw
-
+            val currentAmplitude = onRequestCurrentAmplitude?.invoke()
             handler?.postDelayed(this, ACTION_INTERVAL)
         }
     }
