@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 
 class QuotesPageAdapter(private val quotes: List<Quote>) :
@@ -20,7 +19,7 @@ class QuotesPageAdapter(private val quotes: List<Quote>) :
         holder.bind(quotes[position])
     }
 
-    override fun getItemCount()=quotes.size
+    override fun getItemCount() = quotes.size
 
     class QuoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val quoteTextView: TextView = itemView.findViewById(R.id.txt_quote)

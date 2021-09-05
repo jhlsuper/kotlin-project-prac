@@ -2,6 +2,7 @@ package com.example.wisdomtalk
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+
 import androidx.viewpager2.widget.ViewPager2
 
 class MainActivity : AppCompatActivity() {
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         initViews()
+        initData()
     }
 
 
@@ -22,5 +24,9 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = QuotesPageAdapter(
             listOf(Quote("나는 생각한다,고로 나는 존재한다", "데카르트"))
         )
+    }
+
+    private fun initData(){
+        val remoteConfig = Firebase.remoteConfig
     }
 }
