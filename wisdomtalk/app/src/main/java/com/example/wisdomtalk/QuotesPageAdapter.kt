@@ -1,12 +1,16 @@
 package com.example.wisdomtalk
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class QuotesPageAdapter(private val quotes: List<Quote>) :
+class QuotesPageAdapter(
+    private val quotes: List<Quote>,
+    private val isNameRevealed: Boolean
+) :
     RecyclerView.Adapter<QuotesPageAdapter.QuoteViewHolder>() {
 
 
@@ -16,18 +20,28 @@ class QuotesPageAdapter(private val quotes: List<Quote>) :
         )
 
     override fun onBindViewHolder(holder: QuoteViewHolder, position: Int) {
-        holder.bind(quotes[position])
+        val actualPosition = position % quotes.size
+        holder.bind(quotes[actualPosition], isNameRevealed)
     }
 
-    override fun getItemCount() = quotes.size
+    override fun getItemCount() = Int.MAX_VALUE
 
     class QuoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val quoteTextView: TextView = itemView.findViewById(R.id.txt_quote)
         private val nameTextView: TextView = itemView.findViewById(R.id.txt_name)
 
-        fun bind(quote: Quote) {
-            quoteTextView.text = quote.quote
-            nameTextView.text = quote.name
+        @SuppressLint("SetTextI18n")
+        fun bind(quote: Quote, isNameRevealed: Boolean) {
+            quoteTextView.text = "\"${quote.quote}\""
+            if (isNameRevealed) {
+                nameTextView.text = "-${quote.name}"
+
+                nameTextView.visibility = View.VISIBLE
+            } else {
+                nameTextView.visibility = View.GONE
+            }
+
+
         }
     }
 }
