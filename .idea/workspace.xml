@@ -23,16 +23,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c9fab7b-f91c-4122-aad1-27e0b65418b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/calculator/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/androidTest/java/com/example/alarm/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/java/com/example/alarm/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/app/src/test/java/com/example/alarm/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alarm/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="main" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
   </component>
   <component name="ProjectId" id="1tG6HNMDmcu0GE7SgTCDNmzMzkT" />
   <component name="ProjectViewState">
@@ -42,7 +79,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../../../User/Noname/SDK" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Pomodo-Timer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -69,11 +106,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1714" y="295" key="FileChooserDialogImpl" timestamp="1626175250273">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state x="1016" y="236" key="FileChooserDialogImpl" timestamp="1632033561418">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="1016" y="236" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1624425839667" />
+    <state x="1016" y="236" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1632033561418" />
     <state x="1714" y="295" key="FileChooserDialogImpl/62.0.2498.1080@62.0.2498.1080" timestamp="1626175250273" />
-    <state x="1715" y="295" key="FileChooserDialogImpl/63.0.2497.1080@63.0.2497.1080" timestamp="1622633009366" />
   </component>
 </project>
